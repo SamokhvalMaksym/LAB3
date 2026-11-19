@@ -27,9 +27,9 @@ ST-LINK на платі STM32F411E-DISCO не з'єднаний з UART мікр
 | PuTTY | Serial, 115200, Flow control: None |
 
 ## Налаштування в CubeMX
-![Режим USB_OTG_FS](images/cubemx_usb.png)
-![Middleware USB_DEVICE (CDC)](images/cubemx_cdc.png)
-![Clock Configuration](images/cubemx_clock.png)
+![Режим USB_OTG_FS](Screenshot_31.png)
+![Middleware USB_DEVICE (CDC)](Screenshot_32.png)
+![Clock Configuration](Screenshot_33.png)
 
 ## Алгоритм роботи
 **Плата → ПК.** Програма рахує натискання кнопки B1 (з програмним антидребезгом 30 мс). Якщо 1,5 с кнопку не натискали, серію вважаємо завершеною, і на ПК надсилається `Presses: N`.
@@ -50,9 +50,9 @@ else usb_rx_buf[idx++] = c;
 5. Ввести число і Enter, перевірити миготіння LD4 та відповідь плати.
 
 ## Результат
-![Налаштування PuTTY](images/putty_settings.png)
-![Плата → ПК: кількість натискань та ПК → плата: ввід числа](images/putty_presses.png)
-![Світлодіод LD4 блимає](images/board_led.jpg)
+![Налаштування PuTTY](Screenshot_34.png)
+![Плата → ПК: кількість натискань та ПК → плата: ввід числа](20261118_131715.jpg)
+![Світлодіод LD4 блимає](20261118_1317151.jpg)
 
 ## Висновки
 Реалізовано двосторонній зв'язок ПК і МК через віртуальний COM-порт (USB CDC): кількість натискань кнопки передається на ПК, а введене на ПК число визначає кількість миготінь світлодіода.
